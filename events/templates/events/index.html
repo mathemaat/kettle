@@ -1,5 +1,18 @@
 {% extends "outline.html" %}
 
 {% block body %}
-  Welcome to the index page.
+  {% for gebeurtenis in gebeurtenissen %}
+    <div class="gebeurtenis" style="width: 800px;">
+      <div class="meta-data" style="float: left;">
+        <span>{{ gebeurtenis.datum | date:"d-m-Y" }}</span>
+        <span>{{ gebeurtenis.locatie }}</span>
+      </div>
+      <div class="slachtofferaantallen" style="float: right;">
+        {% for slachtofferaantal in gebeurtenis.slachtofferaantal_set.all %}
+          <span>{{ slachtofferaantal }}</span>
+        {% endfor %}
+      </div>
+      <br style="clear: both;" />
+    </div>
+  {% endfor %}
 {% endblock %}
