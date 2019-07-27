@@ -2,3 +2,5 @@
 .sass-cache
 *.pyc
 
+kettle/local-settings.ini
+
