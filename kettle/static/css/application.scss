@@ -5,6 +5,12 @@ body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, te
   padding: 0px;
 }
 
+a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
 body
 {
   background: #fffff0;
@@ -21,9 +27,33 @@ body
   }
 }
 
+#menu
+{
+  display: block;
+  margin: 0px 40px 40px;
+
+  a
+  {
+    background: #f8f8f8;
+    display: inline-block;
+    margin-right: 8px;
+    padding: 8px;
+    border-width: 1px 2px 2px 1px;
+    border-style: solid;
+    border-color: #a0a0a0;
+    font-weight: bold;
+    font-size: 14pt;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 #body
 {
   margin: 0px 40px;
+  width: 1000px;
 }
 
 div.gebeurtenis
@@ -34,7 +64,6 @@ div.gebeurtenis
   border-style: solid;
   border-color: #c08080;
   margin-bottom: 20px;
-  width: 1000px;
 
   div.meta-data
   {
@@ -65,4 +94,19 @@ div.gebeurtenis.mega div.meta-data
 div.gebeurtenis.groot div.meta-data
 {
   font-size: 16pt;
+}
+
+div.infopage
+{
+  background: #ffffff;
+  padding: 10px;
+  border-width: 1px 2px 2px 1px;
+  border-style: solid;
+  border-color: #c08080;
+  margin-bottom: 20px;
+
+  p
+  {
+    margin-bottom: 8px;
+  }
 }
