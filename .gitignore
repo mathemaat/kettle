@@ -3,4 +3,5 @@
 *.pyc
 
 kettle/local-settings.ini
+*/migrations/*.py
 

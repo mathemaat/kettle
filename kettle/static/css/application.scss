@@ -4,3 +4,65 @@ body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, te
   margin: 0px;
   padding: 0px;
 }
+
+body
+{
+  background: #fffff0;
+}
+
+#header
+{
+  margin: 20px 40px;
+
+  h1
+  {
+    font-weight: bold;
+    font-size: 32pt;
+  }
+}
+
+#body
+{
+  margin: 0px 40px;
+}
+
+div.gebeurtenis
+{
+  background: #ffffff;
+  padding: 10px;
+  border-width: 1px 2px 2px 1px;
+  border-style: solid;
+  border-color: #c08080;
+  margin-bottom: 20px;
+  width: 1000px;
+
+  div.meta-data
+  {
+    margin-bottom: 10px;
+
+    span
+    {
+      font-weight: bold;
+    }
+  }
+
+  div.icons
+  {
+    vertical-align: top;
+  }
+}
+
+div.gebeurtenis.giga div.meta-data
+{
+  font-size: 24pt;
+}
+
+div.gebeurtenis.mega div.meta-data
+{
+  font-size: 20pt;
+}
+
+div.gebeurtenis.groot div.meta-data
+{
+  font-size: 16pt;
+}

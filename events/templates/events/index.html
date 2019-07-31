@@ -1,5 +1,29 @@
 {% extends "outline.html" %}
 
+{% load static %}
+
 {% block body %}
-  Welcome to the index page.
+  <div>
+  {% for gebeurtenis in gebeurtenissen %}
+    <div class="gebeurtenis {{ gebeurtenis.get_omvang | lower }}">
+      <div class="meta-data">
+        <div class="datum-en-locatie">
+          <span class="datum">{{ gebeurtenis.datum | date:"d-m-Y" }}</span>
+          te
+          <span class="locatie">{{ gebeurtenis.locatie }}</span>
+        </div>
+        <div class="slachtofferaantal-en-oorzaak">
+          <span class="slachtofferaantal">{{ gebeurtenis.get_slachtofferbeschrijving }}</span>
+          wegens
+          <span class="oorzaak">{{ gebeurtenis.oorzaak }}</span>
+        </div>
+      </div>
+      <div class="icons">
+        {% for afbeelding in gebeurtenis.get_afbeeldingenreeks %}
+          <img src="{% get_static_prefix %}img/{{afbeelding}}" alt="test" />
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+  </div>
 {% endblock %}
