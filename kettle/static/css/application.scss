@@ -1,4 +1,4 @@
-body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, table, th, td
+body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, table, th, td, select
 {
   font-weight: normal;
   margin: 0px;
@@ -109,4 +109,64 @@ div.infopage
   {
     margin-bottom: 8px;
   }
+}
+
+form
+{
+  legend
+  {
+    font-size: 14pt;
+    font-weight: bold;
+  }
+
+  div.form-row
+  {
+    padding: 2px;
+    margin-bottom: 4px;
+
+    label, div.value
+    {
+        float: left;
+    }
+
+    label
+    {
+      width: 200px;
+      line-height: 30px;
+    }
+
+    div.value
+    {
+      input, select
+      {
+        height: 30px;
+      }
+    }
+  }
+
+  div.submit-buttons
+  {
+    padding: 2px;
+
+    input[type="submit"]
+    {
+      clear: both;
+      margin-left: 200px;
+      background: #80c080;
+      border: 1px solid #408040;
+      padding: 4px;
+      font-weight: bold;
+
+      &:hover
+      {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+br.clear
+{
+  clear: both;
 }

@@ -1,0 +1,25 @@
+{% extends "outline.html" %}
+
+{% load static %}
+
+{% block body %}
+  <div class="infopage">
+    <form method="POST">
+      <legend>Nieuwe melding</legend>
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-row">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          <div class="value">
+            {{ field }}
+            {{ field.errors }}
+          </div>
+          <br class="clear" />
+        </div>
+      {% endfor %}
+      <div class="submit-buttons">
+        <input type="submit" value="Verzenden" />
+      </div>
+    </form>
+  </div>
+{% endblock %}

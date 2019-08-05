@@ -1,4 +1,4 @@
-body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, table, th, td {
+body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, table, th, td, select {
   font-weight: normal;
   margin: 0px;
   padding: 0px;
@@ -85,6 +85,44 @@ div.infopage {
 }
 div.infopage p {
   margin-bottom: 8px;
+}
+
+form legend {
+  font-size: 14pt;
+  font-weight: bold;
+}
+form div.form-row {
+  padding: 2px;
+  margin-bottom: 4px;
+}
+form div.form-row label, form div.form-row div.value {
+  float: left;
+}
+form div.form-row label {
+  width: 200px;
+  line-height: 30px;
+}
+form div.form-row div.value input, form div.form-row div.value select {
+  height: 30px;
+}
+form div.submit-buttons {
+  padding: 2px;
+}
+form div.submit-buttons input[type=submit] {
+  clear: both;
+  margin-left: 200px;
+  background: #80c080;
+  border: 1px solid #408040;
+  padding: 4px;
+  font-weight: bold;
+}
+form div.submit-buttons input[type=submit]:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+br.clear {
+  clear: both;
 }
 
 /*# sourceMappingURL=application.css.map */
