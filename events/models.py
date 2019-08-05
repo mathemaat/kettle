@@ -7,6 +7,7 @@ class Doodsoorzaak(models.Model):
     class Meta:
         verbose_name = "Doodsoorzaak"
         verbose_name_plural = "Doodsoorzaken"
+        ordering = ['omschrijving']
 
     def __str__(self):
         return self.omschrijving
@@ -19,6 +20,7 @@ class OnderliggendeOorzaak(models.Model):
     class Meta:
         verbose_name = "Onderliggende oorzaak"
         verbose_name_plural = "Onderliggende oorzaken"
+        ordering = ['omschrijving']
 
     def __str__(self):
         return "{} ({})".format(self.doodsoorzaak.omschrijving, self.omschrijving)
@@ -38,6 +40,7 @@ class Dier(models.Model):
     class Meta:
         verbose_name = "Dier"
         verbose_name_plural = "Dieren"
+        ordering = ['omschrijving']
 
     def __str__(self):
         return self.omschrijving
@@ -61,6 +64,7 @@ class Gebeurtenis(models.Model):
     class Meta:
         verbose_name = "Gebeurtenis"
         verbose_name_plural = "Gebeurtenissen"
+        ordering = ['-datum']
 
     def __str__(self):
         return "{}: {} te {} wegens {}".format(
