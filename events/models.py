@@ -52,8 +52,8 @@ class Gebeurtenis(models.Model):
 
     datum = models.DateField()
     locatie = models.CharField(max_length=255)
-    oorzaak = models.ForeignKey(OnderliggendeOorzaak, on_delete=models.PROTECT)
-    dier = models.ForeignKey(Dier, on_delete=models.PROTECT, null=True, blank=True)
+    oorzaak = models.ForeignKey(OnderliggendeOorzaak, on_delete=models.PROTECT, null=True, blank=True)
+    dier = models.ForeignKey(Dier, on_delete=models.PROTECT)
     slachtofferaantal = models.IntegerField(null=True, blank=True)
     slachtofferbeschrijving_format = models.CharField(max_length=255, default='{slachtofferaantal} {dier}')
 
