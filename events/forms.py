@@ -41,6 +41,15 @@ class GebeurtenisForm(forms.ModelForm):
         required=False,
     )
 
+    opmerkingen = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Zijn de keuzemogelijkheden te beperkt? Of heeft u extra informatie, zoals een link naar het nieuwsbericht? Plaats die dan hier.',
+            }
+        ),
+        required=False,
+    )
+
     class Meta:
         model = Gebeurtenis
         fields = [
@@ -49,6 +58,7 @@ class GebeurtenisForm(forms.ModelForm):
             'dier',
             'slachtofferaantal',
             'oorzaak',
+            'opmerkingen',
         ]
 
     def clean_datum(self, *args, **kwargs):

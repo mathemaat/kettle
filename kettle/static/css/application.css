@@ -105,6 +105,9 @@ form div.form-row label {
 form div.form-row div.value input, form div.form-row div.value select {
   height: 30px;
 }
+form div.form-row div.value textarea {
+  padding: 4px;
+}
 form div.submit-buttons {
   padding: 2px;
 }
