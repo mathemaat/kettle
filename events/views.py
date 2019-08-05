@@ -13,7 +13,6 @@ def index(request):
 
 def melding_maken(request):
     form = GebeurtenisForm(request.POST or None)
-    print(request.POST)
     if (form.is_valid()):
         form.save()
         form = GebeurtenisForm()
