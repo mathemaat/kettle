@@ -18,7 +18,12 @@
       {% block body %} CONTENT HERE {% endblock %}
     </div>
     <div id="footer">
-      &#169; {% now "Y" %}
+      <div class="left-column">
+        <a class="mailto" href="mailto:stalbrand@xs4all.nl">E-mail: stalbrand@xs4all.nl</a>
+      </div>
+      <div class="right-column">
+        <span class="copyright">&#169; {% now "Y" %}</span>
+      </div>
     </div>
   </body>
 </html>

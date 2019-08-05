@@ -54,6 +54,25 @@ body
 {
   margin: 0px 40px;
   width: 1000px;
+  min-height: 400px;
+}
+
+#footer
+{
+  background: #f8f8f8;
+  border-top: 1px solid #a0a0a0;
+  height: 200px;
+  padding: 40px;
+
+  div.left-column
+  {
+    float: left;
+  }
+
+  div.right-column
+  {
+    float: right;
+  }
 }
 
 div.gebeurtenis
