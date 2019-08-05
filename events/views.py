@@ -15,9 +15,10 @@ def melding_maken(request):
     form = GebeurtenisForm(request.POST or None)
     if (form.is_valid()):
         form.save()
-        form = GebeurtenisForm()
-    context = {'form': form}
-    return render(request, 'events/melding-maken.html', context)
+        return render(request, 'events/melding-opgeslagen.html')
+    else:
+        context = {'form': form}
+        return render(request, 'events/melding-maken.html', context)
 
 
 def over(request):
