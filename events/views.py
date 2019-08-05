@@ -6,7 +6,7 @@ from .forms import GebeurtenisForm
 
 
 def index(request):
-    gebeurtenissen = Gebeurtenis.objects.all().order_by('-datum')
+    gebeurtenissen = Gebeurtenis.objects.filter(is_bevestigd=True).order_by('-datum')
     context = {'gebeurtenissen': gebeurtenissen}
     return render(request, 'events/index.html', context)
 

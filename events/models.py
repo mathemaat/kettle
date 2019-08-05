@@ -59,7 +59,7 @@ class Gebeurtenis(models.Model):
     dier = models.ForeignKey(Dier, on_delete=models.PROTECT)
     slachtofferaantal = models.IntegerField(null=True, blank=True)
     slachtofferbeschrijving_format = models.CharField(max_length=255, default='{slachtofferaantal} {dier}')
-
+    is_bevestigd = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Gebeurtenis"
