@@ -25,19 +25,28 @@ body {
   display: block;
   margin: 0px 40px 40px;
 }
-#menu a {
-  background: #f8f8f8;
+#menu div.menu-item {
   display: inline-block;
-  margin-right: 8px;
-  padding: 8px;
+}
+#menu div.menu-item a {
+  background: #f8f8f8;
+  padding: 2px 8px;
   border-width: 1px 2px 2px 1px;
   border-style: solid;
   border-color: #a0a0a0;
   font-weight: bold;
   font-size: 14pt;
 }
-#menu a:hover {
+#menu div.menu-item a:hover {
   text-decoration: underline;
+}
+#menu div.menu-item:before {
+  margin: 0px 4px;
+  content: "|";
+}
+#menu div.menu-item:first-child:before {
+  margin: 0px;
+  content: "";
 }
 
 #body {

@@ -32,20 +32,36 @@ body
   display: block;
   margin: 0px 40px 40px;
 
-  a
+  div.menu-item
   {
-    background: #f8f8f8;
     display: inline-block;
-    margin-right: 8px;
-    padding: 8px;
-    border-width: 1px 2px 2px 1px;
-    border-style: solid;
-    border-color: #a0a0a0;
-    font-weight: bold;
-    font-size: 14pt;
 
-    &:hover {
-      text-decoration: underline;
+    a
+    {
+      background: #f8f8f8;
+      padding: 2px 8px;
+      border-width: 1px 2px 2px 1px;
+      border-style: solid;
+      border-color: #a0a0a0;
+      font-weight: bold;
+      font-size: 14pt;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:before {
+      margin: 0px 4px;
+      content: "|";
+    }
+  }
+
+  div.menu-item:first-child
+  {
+    &:before {
+      margin: 0px;
+      content: "";
     }
   }
 }
