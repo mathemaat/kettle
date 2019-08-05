@@ -53,6 +53,7 @@ body {
   margin: 0px 40px;
   width: 1000px;
   min-height: 400px;
+  padding-bottom: 20px;
 }
 
 #footer {
